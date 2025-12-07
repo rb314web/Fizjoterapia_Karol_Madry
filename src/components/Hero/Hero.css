@@ -1,0 +1,144 @@
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  background-image: url('/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-dark);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+}
+
+.hero-quote {
+  font-size: 1.1rem;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+    min-height: 60vh;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+
