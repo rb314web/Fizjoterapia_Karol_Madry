@@ -2,7 +2,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}header-bg.jpg)` }}>
       <div className="hero-container">
         <div className="hero-content">
           <h2 className="hero-title">TWÓJ POWRÓT DO AKTYWNOŚCI</h2>

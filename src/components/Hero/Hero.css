@@ -1,6 +1,6 @@
 .hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-  background-image: url('/header-bg.jpg');
+  /* background-image is handled in component for proper base path support */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

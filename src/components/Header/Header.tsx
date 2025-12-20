@@ -32,7 +32,7 @@ const Header = () => {
       <div className="header-container">
         <div className="logo">
           <a href="#home" onClick={closeMenu}>
-            <img src="/logo.png" alt="Fizjoterapia Karol Mądry" className="logo-img" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Fizjoterapia Karol Mądry" className="logo-img" />
           </a>
         </div>
         <button 
